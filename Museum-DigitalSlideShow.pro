@@ -38,3 +38,8 @@ HEADERS += \
     filefinder.h \
     jsonsettings.h \
     gpiolistener.h
+
+unix:!macx: LIBS += -L$$PWD/../../../../usr/local/lib/ -lwiringPi
+
+INCLUDEPATH += $$PWD/../../../../usr/local/include
+DEPENDPATH += $$PWD/../../../../usr/local/include
